@@ -1,0 +1,860 @@
+/**
+ * Red Wood Theme for Logseq
+ * Based on the Omarchy Red Wood / Aether Theme
+ *
+ * Installation:
+ * 1. Copy this file to your Logseq graph folder as custom.css
+ * 2. Or paste the contents into Settings > Custom CSS
+ */
+
+/* ============================================
+   ROOT VARIABLES
+   ============================================ */
+
+.dark-theme,
+html[data-theme="dark"],
+:root {
+  --ls-primary-background-color: #131328 !important;
+  --ls-secondary-background-color: #1a1a35 !important;
+  --ls-tertiary-background-color: #212145 !important;
+  --ls-quaternary-background-color: #2a2a55 !important;
+  --ls-primary-text-color: #ECC0A0 !important;
+  --ls-secondary-text-color: #d3bab0 !important;
+  --ls-block-properties-background-color: rgba(125, 125, 164, 0.1) !important;
+  --ls-block-ref-link-text-color: #9498c2 !important;
+  --ls-block-bullet-border-color: #7d7da4 !important;
+  --ls-block-bullet-color: #7d7da4 !important;
+  --ls-block-highlight-color: rgba(148, 152, 194, 0.2) !important;
+  --ls-selection-background-color: rgba(148, 152, 194, 0.3) !important;
+  --ls-selection-text-color: #fcf3ec !important;
+  --ls-block-bullet-active-color: #9498c2 !important;
+  --ls-link-text-color: #9498c2 !important;
+  --ls-link-text-hover-color: #cdcfe4 !important;
+  --ls-link-ref-text-color: #c69ec7 !important;
+  --ls-link-ref-text-hover-color: #e9d7e9 !important;
+  --ls-external-link-color: #aab5cb !important;
+  --ls-tag-text-color: #c69ec7 !important;
+  --ls-tag-text-hover-color: #e9d7e9 !important;
+  --ls-page-properties-background-color: rgba(125, 125, 164, 0.05) !important;
+  --ls-page-checkbox-color: #9498c2 !important;
+  --ls-page-checkbox-border-color: #7d7da4 !important;
+  --ls-page-blockquote-color: #7d7da4 !important;
+  --ls-page-blockquote-border-color: #AF8878 !important;
+  --ls-page-inline-code-color: #EC8B74 !important;
+  --ls-page-inline-code-bg-color: rgba(236, 139, 116, 0.1) !important;
+  --ls-page-mark-color: #131328 !important;
+  --ls-page-mark-bg-color: #AF8878 !important;
+  --ls-title-text-color: #fcf3ec !important;
+  --ls-page-title-color: #fcf3ec !important;
+  --ls-icon-color: #7d7da4 !important;
+  --ls-border-color: rgba(236, 192, 160, 0.1) !important;
+  --ls-secondary-border-color: rgba(125, 125, 164, 0.2) !important;
+  --ls-guideline-color: rgba(125, 125, 164, 0.15) !important;
+  --ls-scrollbar-foreground-color: #7d7da4 !important;
+  --ls-scrollbar-background-color: #131328 !important;
+  --ls-scrollbar-thumb-hover-color: #9498c2 !important;
+  --ls-left-sidebar-background-color: #0f0f22 !important;
+  --ls-left-sidebar-text-color: #ECC0A0 !important;
+  --ls-right-sidebar-background-color: #0f0f22 !important;
+  --ls-menu-hover-color: rgba(148, 152, 194, 0.15) !important;
+  --ls-a-chosen-bg: rgba(148, 152, 194, 0.2) !important;
+  --ls-search-background-color: #1a1a35 !important;
+  --ls-table-tr-even-background-color: rgba(125, 125, 164, 0.05) !important;
+  --ls-error-color: #DE5F65 !important;
+  --ls-warning-color: #AF8878 !important;
+  --ls-success-color: #EC8B74 !important;
+  --ls-active-primary-color: #9498c2 !important;
+  --ls-active-secondary-color: #c69ec7 !important;
+  --ls-focus-ring-color: rgba(148, 152, 194, 0.5) !important;
+  --color-level-1: #131328 !important;
+  --color-level-2: #1a1a35 !important;
+  --color-level-3: #212145 !important;
+  --color-level-4: #2a2a55 !important;
+  --color-level-5: #333366 !important;
+  --color-level-6: #3d3d77 !important;
+  --rx-logseq-01: #131328 !important;
+  --rx-logseq-02: #1a1a35 !important;
+  --rx-logseq-03: #212145 !important;
+  --rx-logseq-04: #2a2a55 !important;
+}
+
+/* ============================================
+   MAIN APP CONTAINER
+   ============================================ */
+
+html,
+html.is-native-android,
+html.is-native-iphone,
+html.is-native-ipad {
+  background-color: #131328 !important;
+}
+
+body {
+  background-color: #131328 !important;
+  color: #ECC0A0 !important;
+}
+
+#app-container,
+#main-container,
+.cp__sidebar-main-layout,
+#main-content-container,
+.cp__sidebar-main-content,
+.page,
+.home-page {
+  background-color: #131328 !important;
+  color: #ECC0A0 !important;
+}
+
+/* Main content area */
+#main-content-container {
+  background: #131328 !important;
+}
+
+.cp__sidebar-main-content {
+  background: #131328 !important;
+}
+
+/* Content blocks container */
+.blocks-container,
+.page-blocks-inner,
+#journals .journal,
+.is-journals .journal {
+  background-color: #131328 !important;
+}
+
+/* ============================================
+   LEFT SIDEBAR
+   ============================================ */
+
+.left-sidebar-inner,
+#left-sidebar,
+.cp__sidebar-left-layout {
+  background-color: #0f0f22 !important;
+  color: #ECC0A0 !important;
+}
+
+.left-sidebar-inner .nav-content-item,
+.left-sidebar-inner a,
+.left-sidebar-inner .item {
+  color: #ECC0A0 !important;
+}
+
+.left-sidebar-inner a:hover,
+.left-sidebar-inner .nav-content-item:hover {
+  background-color: rgba(148, 152, 194, 0.1) !important;
+  color: #fcf3ec !important;
+}
+
+.left-sidebar-inner .active,
+.left-sidebar-inner .nav-content-item.active {
+  background-color: rgba(148, 152, 194, 0.15) !important;
+}
+
+/* Favorites and recent */
+.nav-content-item-inner,
+.favorites,
+.recent {
+  color: #ECC0A0 !important;
+}
+
+/* ============================================
+   RIGHT SIDEBAR
+   ============================================ */
+
+#right-sidebar,
+.cp__right-sidebar,
+.cp__right-sidebar-inner {
+  background-color: #0f0f22 !important;
+  color: #ECC0A0 !important;
+}
+
+.sidebar-item,
+.sidebar-item-list {
+  background-color: #0f0f22 !important;
+}
+
+.sidebar-item-header {
+  background-color: #131328 !important;
+  border-bottom: 1px solid rgba(125, 125, 164, 0.2) !important;
+}
+
+/* ============================================
+   TOP BAR / HEAD BAR
+   ============================================ */
+
+.cp__header,
+.cp__header-logo,
+#head {
+  background-color: #131328 !important;
+  color: #ECC0A0 !important;
+}
+
+/* ============================================
+   TEXT COLORS
+   ============================================ */
+
+.content,
+.block-content,
+.block-content-inner,
+.editor-inner,
+.uniline-block,
+.multiline-block,
+p, span, div {
+  color: #ECC0A0;
+}
+
+/* Page title */
+.page-title,
+h1.title,
+.ls-page-title,
+.page-title .title {
+  color: #fcf3ec !important;
+}
+
+/* ============================================
+   LINKS & REFERENCES
+   ============================================ */
+
+a,
+.page-ref,
+.block-ref {
+  color: #9498c2 !important;
+}
+
+a:hover,
+.page-ref:hover,
+.block-ref:hover {
+  color: #cdcfe4 !important;
+}
+
+.page-reference .bracket {
+  color: #7d7da4 !important;
+}
+
+/* External links */
+a.external-link {
+  color: #aab5cb !important;
+}
+
+/* Tags */
+a.tag {
+  color: #c69ec7 !important;
+}
+
+a.tag:hover {
+  color: #e9d7e9 !important;
+  background-color: rgba(198, 158, 199, 0.1) !important;
+}
+
+/* Block reference */
+.block-ref {
+  background-color: rgba(148, 152, 194, 0.1) !important;
+  border-bottom: 1px solid #9498c2 !important;
+  padding: 2px 4px !important;
+}
+
+.block-ref:hover {
+  background-color: rgba(148, 152, 194, 0.2) !important;
+}
+
+/* ============================================
+   BULLETS & INDENTATION
+   ============================================ */
+
+.bullet-container .bullet {
+  background-color: #7d7da4 !important;
+}
+
+.bullet-container:hover .bullet {
+  background-color: #9498c2 !important;
+}
+
+.block-children-left-border {
+  border-left-color: rgba(125, 125, 164, 0.2) !important;
+}
+
+.block-children-left-border:hover {
+  background-color: #9498c2 !important;
+}
+
+/* ============================================
+   HEADINGS
+   ============================================ */
+
+h1, .h1, .editor-inner h1 {
+  color: #fcf3ec !important;
+}
+
+h2, .h2, .editor-inner h2 {
+  color: #e9d7e9 !important;
+}
+
+h3, .h3, .editor-inner h3 {
+  color: #cdcfe4 !important;
+}
+
+h4, .h4, .editor-inner h4 {
+  color: #e2e6ee !important;
+}
+
+h5, .h5, .editor-inner h5 {
+  color: #d3bab0 !important;
+}
+
+h6, .h6, .editor-inner h6 {
+  color: #facdc2 !important;
+}
+
+/* ============================================
+   CODE BLOCKS
+   ============================================ */
+
+pre,
+code,
+.CodeMirror,
+.cm-s-default {
+  background-color: #0f0f22 !important;
+  color: #ECC0A0 !important;
+}
+
+.CodeMirror-gutters {
+  background-color: #0f0f22 !important;
+  border-right: 1px solid rgba(125, 125, 164, 0.2) !important;
+}
+
+.CodeMirror-linenumber {
+  color: #7d7da4 !important;
+}
+
+/* Inline code */
+:not(pre) > code,
+.inline-code {
+  background-color: rgba(236, 139, 116, 0.15) !important;
+  color: #EC8B74 !important;
+  padding: 2px 6px !important;
+  border-radius: 3px !important;
+}
+
+/* Syntax highlighting */
+.cm-keyword { color: #9498c2 !important; }
+.cm-string, .cm-string-2 { color: #EC8B74 !important; }
+.cm-number { color: #f1a8ab !important; }
+.cm-comment { color: #7d7da4 !important; }
+.cm-variable { color: #ECC0A0 !important; }
+.cm-variable-2 { color: #aab5cb !important; }
+.cm-variable-3 { color: #c69ec7 !important; }
+.cm-def { color: #c69ec7 !important; }
+.cm-operator { color: #ECC0A0 !important; }
+.cm-property { color: #e9d7e9 !important; }
+.cm-atom { color: #f1a8ab !important; }
+.cm-tag { color: #DE5F65 !important; }
+.cm-attribute { color: #c69ec7 !important; }
+.cm-builtin { color: #9498c2 !important; }
+.cm-qualifier { color: #AF8878 !important; }
+.cm-meta { color: #7d7da4 !important; }
+
+/* ============================================
+   BLOCKQUOTE
+   ============================================ */
+
+blockquote,
+.blockquote {
+  border-left: 4px solid #AF8878 !important;
+  background-color: rgba(175, 136, 120, 0.08) !important;
+  color: #d3bab0 !important;
+  padding-left: 1em !important;
+}
+
+/* ============================================
+   HIGHLIGHT / MARK
+   ============================================ */
+
+mark,
+.mark,
+.highlight {
+  background-color: #AF8878 !important;
+  color: #131328 !important;
+}
+
+/* ============================================
+   TODO / DOING / DONE
+   ============================================ */
+
+.todo-keyword,
+.TODO {
+  color: #DE5F65 !important;
+  background-color: rgba(222, 95, 101, 0.15) !important;
+}
+
+.doing-keyword,
+.DOING,
+.NOW {
+  color: #AF8878 !important;
+  background-color: rgba(175, 136, 120, 0.15) !important;
+}
+
+.done-keyword,
+.DONE {
+  color: #EC8B74 !important;
+  background-color: rgba(236, 139, 116, 0.15) !important;
+}
+
+.LATER,
+.later-keyword {
+  color: #9498c2 !important;
+  background-color: rgba(148, 152, 194, 0.15) !important;
+}
+
+.WAITING,
+.waiting-keyword {
+  color: #c69ec7 !important;
+  background-color: rgba(198, 158, 199, 0.15) !important;
+}
+
+.CANCELLED,
+.CANCELED,
+.cancelled-keyword {
+  color: #7d7da4 !important;
+  background-color: rgba(125, 125, 164, 0.15) !important;
+  text-decoration: line-through !important;
+}
+
+/* Checkbox */
+.form-checkbox,
+input[type="checkbox"] {
+  border-color: #7d7da4 !important;
+  background-color: transparent !important;
+}
+
+.form-checkbox:checked,
+input[type="checkbox"]:checked {
+  background-color: #9498c2 !important;
+  border-color: #9498c2 !important;
+}
+
+/* ============================================
+   PRIORITY
+   ============================================ */
+
+.priority[data-priority="A"],
+[priority="A"] {
+  color: #DE5F65 !important;
+}
+
+.priority[data-priority="B"],
+[priority="B"] {
+  color: #AF8878 !important;
+}
+
+.priority[data-priority="C"],
+[priority="C"] {
+  color: #9498c2 !important;
+}
+
+/* ============================================
+   SEARCH & COMMAND PALETTE
+   ============================================ */
+
+#search,
+.cp__palette,
+.cp__palette-main,
+.search-results-wrap,
+.ls-search {
+  background-color: #1a1a35 !important;
+  color: #ECC0A0 !important;
+}
+
+.search-result,
+.search-results .menu-link {
+  background-color: #1a1a35 !important;
+}
+
+.search-result:hover,
+.search-result.selected,
+.search-results .menu-link:hover,
+.chosen {
+  background-color: rgba(148, 152, 194, 0.2) !important;
+}
+
+.search-input,
+.cp__palette input {
+  background-color: #0f0f22 !important;
+  color: #ECC0A0 !important;
+  border-color: rgba(125, 125, 164, 0.3) !important;
+}
+
+/* ============================================
+   DROPDOWN & MENUS
+   ============================================ */
+
+.dropdown-wrapper,
+.menu-links-wrapper,
+.menu-links-outer,
+.tippy-wrapper,
+.ui__dropdown-menu,
+.ui__dropdown-menu-content {
+  background-color: #1a1a35 !important;
+  border: 1px solid rgba(125, 125, 164, 0.2) !important;
+  color: #ECC0A0 !important;
+}
+
+.menu-link,
+.dropdown-item {
+  color: #ECC0A0 !important;
+}
+
+.menu-link:hover,
+.dropdown-item:hover {
+  background-color: rgba(148, 152, 194, 0.15) !important;
+  color: #fcf3ec !important;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+button,
+.ui__button,
+.button {
+  background-color: #1a1a35 !important;
+  border-color: rgba(125, 125, 164, 0.3) !important;
+  color: #ECC0A0 !important;
+}
+
+button:hover,
+.ui__button:hover,
+.button:hover {
+  background-color: rgba(148, 152, 194, 0.2) !important;
+  color: #fcf3ec !important;
+}
+
+.ui__button.is-active {
+  background-color: #9498c2 !important;
+  color: #131328 !important;
+}
+
+/* ============================================
+   INPUT FIELDS
+   ============================================ */
+
+input,
+textarea,
+select {
+  background-color: #0f0f22 !important;
+  border-color: rgba(125, 125, 164, 0.3) !important;
+  color: #ECC0A0 !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #9498c2 !important;
+  box-shadow: 0 0 0 2px rgba(148, 152, 194, 0.2) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #7d7da4 !important;
+}
+
+/* ============================================
+   SELECTION
+   ============================================ */
+
+::selection {
+  background-color: rgba(148, 152, 194, 0.4) !important;
+  color: #fcf3ec !important;
+}
+
+.ls-block.selected,
+.ls-block.selected > .flex-row {
+  background-color: rgba(148, 152, 194, 0.15) !important;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131328;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7d7da4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9498c2;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+
+table {
+  background-color: #131328 !important;
+}
+
+th {
+  background-color: #1a1a35 !important;
+  color: #fcf3ec !important;
+  border-color: rgba(125, 125, 164, 0.2) !important;
+}
+
+td {
+  border-color: rgba(125, 125, 164, 0.15) !important;
+  color: #ECC0A0 !important;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(125, 125, 164, 0.05) !important;
+}
+
+/* ============================================
+   PROPERTIES
+   ============================================ */
+
+.block-properties,
+.page-properties {
+  background-color: rgba(125, 125, 164, 0.05) !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
+}
+
+.page-property-key {
+  color: #aab5cb !important;
+}
+
+.page-property-value {
+  color: #ECC0A0 !important;
+}
+
+/* ============================================
+   LINKED REFERENCES
+   ============================================ */
+
+.references-blocks,
+.page-linked,
+.page-unlinked {
+  background-color: #131328 !important;
+}
+
+.references-blocks-item {
+  background-color: rgba(125, 125, 164, 0.05) !important;
+  border-left: 2px solid #7d7da4 !important;
+}
+
+.references-blocks-item:hover {
+  background-color: rgba(125, 125, 164, 0.1) !important;
+}
+
+/* ============================================
+   EMBED
+   ============================================ */
+
+.embed-block,
+.embed-page {
+  background-color: rgba(125, 125, 164, 0.05) !important;
+  border-left: 2px solid #9498c2 !important;
+}
+
+/* ============================================
+   CALENDAR / DATEPICKER
+   ============================================ */
+
+.react-datepicker,
+.react-datepicker__header {
+  background-color: #1a1a35 !important;
+  border-color: rgba(125, 125, 164, 0.2) !important;
+  color: #ECC0A0 !important;
+}
+
+.react-datepicker__day {
+  color: #ECC0A0 !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: rgba(148, 152, 194, 0.3) !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: #9498c2 !important;
+  color: #131328 !important;
+}
+
+.react-datepicker__day--today {
+  border: 1px solid #9498c2 !important;
+}
+
+/* ============================================
+   TOOLTIP
+   ============================================ */
+
+.tippy-box,
+.tippy-content {
+  background-color: #1a1a35 !important;
+  color: #ECC0A0 !important;
+}
+
+.tippy-arrow {
+  color: #1a1a35 !important;
+}
+
+/* ============================================
+   SETTINGS
+   ============================================ */
+
+.cp__settings-main,
+.settings-modal {
+  background-color: #131328 !important;
+  color: #ECC0A0 !important;
+}
+
+.cp__settings-inner,
+.settings-inner {
+  background-color: #1a1a35 !important;
+}
+
+.settings-menu-item {
+  color: #ECC0A0 !important;
+}
+
+.settings-menu-item:hover,
+.settings-menu-item.active {
+  background-color: rgba(148, 152, 194, 0.15) !important;
+}
+
+/* ============================================
+   MODALS
+   ============================================ */
+
+.ui__modal,
+.ui__modal-panel,
+.modal-panel {
+  background-color: #1a1a35 !important;
+  color: #ECC0A0 !important;
+}
+
+.ui__modal-overlay {
+  background-color: rgba(15, 15, 34, 0.8) !important;
+}
+
+/* ============================================
+   GRAPH VIEW
+   ============================================ */
+
+.graph-view,
+#global-graph {
+  background-color: #131328 !important;
+}
+
+/* ============================================
+   WHITEBOARD
+   ============================================ */
+
+.tl-container {
+  background-color: #131328 !important;
+}
+
+/* ============================================
+   PDF VIEWER
+   ============================================ */
+
+.extensions__pdf-viewer {
+  background-color: #1a1a35 !important;
+}
+
+.extensions__pdf-highlights .hls-record-hl {
+  background-color: rgba(175, 136, 120, 0.4) !important;
+}
+
+/* ============================================
+   FLASHCARDS
+   ============================================ */
+
+.flashcards,
+.flashcards-modal {
+  background-color: #1a1a35 !important;
+  color: #ECC0A0 !important;
+}
+
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+
+.breadcrumb,
+.page-hierarchy {
+  color: #7d7da4 !important;
+}
+
+.breadcrumb a,
+.page-hierarchy a {
+  color: #9498c2 !important;
+}
+
+/* ============================================
+   LOADING / SPINNER
+   ============================================ */
+
+.lds-ring div,
+.loading-spinner {
+  border-color: #9498c2 transparent transparent transparent !important;
+}
+
+/* ============================================
+   PUBLISHING / EXPORT
+   ============================================ */
+
+.publish-export-modal {
+  background-color: #1a1a35 !important;
+}
+
+/* ============================================
+   MISC UI ELEMENTS
+   ============================================ */
+
+hr {
+  border-color: rgba(125, 125, 164, 0.2) !important;
+}
+
+.opacity-50 {
+  color: #7d7da4 !important;
+}
+
+/* Icons */
+.ui__icon,
+svg.icon {
+  color: #7d7da4 !important;
+}
+
+.ui__icon:hover,
+svg.icon:hover {
+  color: #9498c2 !important;
+}
+
+/* Dividers */
+.border-b {
+  border-color: rgba(125, 125, 164, 0.15) !important;
+}
+
+/* Focus states */
+*:focus-visible {
+  outline-color: #9498c2 !important;
+}
+
+/* ============================================
+   ANIMATION OVERRIDES
+   ============================================ */
+
+.fade-enter,
+.fade-enter-active,
+.fade-exit,
+.fade-exit-active {
+  background-color: transparent !important;
+}
