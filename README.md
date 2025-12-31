@@ -1,3 +1,3 @@
-# Logseq Red Forrest Theme
+# Logseq Red Forest Theme
 
-Based on my [Omarchy Red Forrest Theme](https://github.com/AlexZeitler/omarchy-red-forrest)
+Based on my [Omarchy Red Forrest Theme](https://github.com/AlexZeitler/omarchy-red-forest-theme)
